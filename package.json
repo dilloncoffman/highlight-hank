@@ -1,0 +1,18 @@
+{
+  "name": "highlight-hank",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "libs/*"
+  ],
+  "scripts": {
+    "dev": "pnpm run dev:frontend & pnpm run dev:backend",
+    "dev:frontend": "pnpm --filter @highlight-hank/web dev",
+    "dev:backend": "pnpm --filter @highlight-hank/api start:dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "start:frontend": "pnpm --filter @highlight-hank/web start",
+    "start:backend": "pnpm --filter @highlight-hank/api start",
+    "test": "pnpm -r test"
+  }
+}
